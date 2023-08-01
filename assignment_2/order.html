@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"><!--required metadata-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+  <meta name="description" content="Assignment two:Let's Eat Pizza "><!--descrioption of the project-->
+  <meta name="robots" content="noindex,nofollow">         
+  <title>Pizza's </title><!--title of the site -->
+  <link rel="icon" type="image/x-icon" href="./images/logo.png">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Order Your Pizza</h1><!--pizza order page-->
+  </header>
+  <main>
+    <!--form started to take information from user about the prefrences -->
+    <form id="pizzaOrderForm">
+      <label for="pizzaType">Pizza Type:</label>
+      <select id="pizzaType" name="pizzaType" required>
+        <option value="" disabled selected>Select a pizza type</option>
+        <option value="Margherita">Margherita</option>
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Hawaiian">Hawaiian</option>
+        <option value="Vegetarian">Vegetarian</option>
+      </select>
+<!--pizza size options-->
+      <label for="pizzaSize">Size:</label>
+      <div>
+        <input type="radio" id="small" name="size" value="Small" required>
+        <label for="small">Small</label>
+        <input type="radio" id="medium" name="size" value="Medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="large" name="size" value="Large">
+        <label for="large">Large</label>
+      </div>
+<!--toppings options -->
+      <label for="toppings">Toppings:</label>
+      <div>
+        <input type="checkbox" id="cheese" name="toppings" value="Cheese">
+        <label for="cheese">Cheese</label>
+        <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+        <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+        <input type="checkbox" id="olives" name="toppings" value="Olives">
+        <label for="olives">Olives</label>
+      </div>
+<!--numberof pizza's required-->
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+<!--delivery instructions and address -->
+      <label for="delivery">Delivery:</label>
+      <div>
+        <input type="radio" id="pickup" name="delivery" value="Pickup" required>
+        <label for="pickup">Pickup</label>
+        <input type="radio" id="delivery" name="delivery" value="Delivery">
+        <label for="delivery">Delivery</label>
+      </div>
+
+      <label for="address">Address (for delivery):</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter your delivery address"></textarea>
+<!--button to place the order-->
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; Pizza's Here.</p>
+  </footer>
+</body>
+
+</html>
